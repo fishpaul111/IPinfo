@@ -1,4 +1,3 @@
-*
-!.mod
-!.sum
-!.go
+.DS_Store
+*.zip
+*terraform*

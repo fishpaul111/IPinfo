@@ -73,7 +73,7 @@ func Engine(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespon
 
   if success {
     response.StatusCode = http.StatusOK
-    response.Headers = map[string]string{"Content-Type": "text/plain; charset=utf-8"}
+    response.Headers = map[string]string{"Content-Type": "text/html; charset=utf-8"}
     response.Body = strings.Trim(strings.TrimPrefix(fmt.Sprintf("%#v", GetIPInfo(ip)), PREFIX_TO_TRIM), CHARS_TO_TRIM)
   } else {
     response.StatusCode = http.StatusBadRequest
