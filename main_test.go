@@ -28,10 +28,10 @@ func Test_Engine(test *testing.T) {
   var testRequest events.APIGatewayProxyRequest
   var testResponse events.APIGatewayProxyResponse
 
-  testResponse.StatusCode = 123
+  testResponse.StatusCode = 0
   testResponse, error := Engine(testRequest)
 
-  if testResponse.StatusCode == 123 {
+  if testResponse.StatusCode == 0 {
   	test.Error("TEST FAILED. Engine did not return a response.")
   }
   if error != nil {
